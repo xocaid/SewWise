@@ -1,0 +1,11 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "Node.js",
+	"extends": "./base.json",
+	"compilerOptions": {
+		"lib": ["esnext"],
+		"types": ["node"]
+	},
+	"include": ["src"],
+	"exclude": ["node_modules"]
+}

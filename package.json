@@ -1,0 +1,28 @@
+{
+	"name": "@xocaid/sewwise",
+	"version": "0.0.0",
+	"private": true,
+	"description": "A seamless way to catalog and organize your collection of sewing patterns",
+	"homepage": "https://github.com/xocaid/SewWise#readme",
+	"bugs": {
+		"url": "https://github.com/xocaid/SewWise/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/xocaid/SewWise.git"
+	},
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"format": "prettier --write .",
+		"lint": "turbo lint",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"prettier": "@allejo/prettier-config",
+	"devDependencies": {
+		"@allejo/prettier-config": "^1.0.3",
+		"prettier": "^3.0.3",
+		"turbo": "^1.10.15"
+	}
+}
