@@ -2,15 +2,26 @@ export class ApiClient {
 	private readonly GRAPHQL_ENDPOINT = 'https://simplicity.com/graphql';
 	private readonly TOKEN_PAGE = 'https://simplicity.com/simplicity-patterns';
 
+	private static instance: ApiClient;
+
 	private authBearerToken: string | null = null;
 
-	async init() {
-		await this.scrapeCsrfToken();
+	/**
+	 * Enforce the use of a singleton.
+	 *
+	 * @see ApiClient.getInstance()
+	 */
+	private constructor() {}
+
+	async init(force: boolean = false) {
+		if (this.authBearerToken === null || force) {
+			await this.scrapeCsrfToken();
+		}
 
 		return this;
 	}
 
-	async executeGraphQL(query: string) {
+	async executeGraphQL<T = object>(query: string): Promise<T> {
 		const response = await fetch(this.GRAPHQL_ENDPOINT, {
 			method: 'POST',
 			headers: {
@@ -23,6 +34,14 @@ export class ApiClient {
 		});
 
 		return await response.json();
+	}
+
+	static getInstance() {
+		if (!ApiClient.instance) {
+			this.instance = new ApiClient();
+		}
+
+		return this.instance;
 	}
 
 	private async scrapeCsrfToken() {

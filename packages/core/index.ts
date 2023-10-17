@@ -1,9 +1,15 @@
-import { ApiClient } from './src/ApiClient';
-import { SimplicityPatterns } from './src/queries';
+import { ApiClient } from './src/graphql/ApiClient';
+import { SearchQuery } from './src/graphql/SearchQuery';
 
-const client = new ApiClient();
-client.init().then(async (c) => {
-	const response = await c.executeGraphQL(SimplicityPatterns);
+(async function () {
+	const client = ApiClient.getInstance();
+	await client.init();
 
-	console.log(JSON.stringify(response));
-});
+	const searchQuery = new SearchQuery().includeOutOfStock(true);
+
+	const response = await searchQuery.execute();
+
+	for (const product of response.getResults()) {
+		console.log(product.name, '-', product.brand.name, '-', product.images);
+	}
+})();

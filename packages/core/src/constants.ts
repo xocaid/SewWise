@@ -1,9 +1,7 @@
-import gql from 'graphql-tag';
-
 /**
  * @see https://medium.com/@mrthankyou/how-to-get-a-graphql-schema-28915025de0e
  */
-export const GraphqlSchemaIntrospection = gql`
+export const GraphqlSchemaIntrospection = `
 	fragment FullType on __Type {
 		kind
 		name
