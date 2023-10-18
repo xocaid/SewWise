@@ -5,8 +5,11 @@
 	"main": "src/index.ts",
 	"scripts": {
 		"build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"codegen": "graphql-codegen --config codegen.ts"
+		"codegen": "graphql-codegen --config codegen.ts",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"@apollo/client": "^3.8.6"
 	},
 	"devDependencies": {
 		"@graphql-codegen/cli": "5.0.0",
@@ -19,8 +22,5 @@
 		"tsconfig": "*",
 		"tsx": "^3.13.0",
 		"typescript": "^5.2.2"
-	},
-	"dependencies": {
-		"@apollo/client": "^3.8.6"
 	}
 }

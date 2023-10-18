@@ -14,16 +14,10 @@ npm install @xocaid/sewwise-core
 ## Example Usage
 
 ```typescript
-const client = ApiClient.getInstance();
-await client.init();
+const search = new ProductSearchQuery();
+const response = await search.includeOutOfStock(true).execute();
 
-const searchQuery = new SearchQuery()
-	.filterByBrands(PatternBrand.Simplicity)
-	.includeOutOfStock(true);
-
-const response = await searchQuery.execute();
-
-for (const product of response.getResults()) {
+for (const product of response.products) {
 	console.log(product.name, '-', product.brand.name, '-', product.images);
 }
 ```
