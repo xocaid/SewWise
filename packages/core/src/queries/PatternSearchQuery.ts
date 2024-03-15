@@ -8,8 +8,8 @@ import {
 	SearchProductsSortInput,
 	SearchQueriesSearchProductsArgs,
 } from '../generated/graphql';
-import { ApiClient } from './ApiClient';
-import { ProductSearchResult } from './ProductSearchResult';
+import { PatternSearchResult } from './PatternSearchResult';
+import { SimplicityApiClient } from './SimplicityApiClient';
 
 const GraphQL = gql`
 	query SearchProducts(
@@ -82,7 +82,7 @@ const GraphQL = gql`
 	}
 `;
 
-export interface ProductSearchResultType {
+export interface PatternSearchResultType {
 	site: {
 		search: {
 			searchProducts: {
@@ -92,22 +92,22 @@ export interface ProductSearchResultType {
 	};
 }
 
-export class ProductSearchQuery implements IQueryBuilder<ProductSearchResult> {
+export class PatternSearchQuery implements IQueryBuilder<PatternSearchResult> {
 	private readonly searchFilter: SearchProductsFiltersInput = {};
 
 	async execute() {
-		const client = ApiClient.getInstance();
+		const client = SimplicityApiClient.getInstance();
 		await client.init();
 
 		const response = await client.executeGraphQL<
-			ProductSearchResultType,
+			PatternSearchResultType,
 			SearchQueriesSearchProductsArgs
 		>(GraphQL, {
 			filters: this.searchFilter,
 			sort: SearchProductsSortInput.Featured,
 		});
 
-		return new ProductSearchResult(this, response.data);
+		return new PatternSearchResult(this, response.data);
 	}
 
 	filterByBrands(...brands: PatternBrand[]): this {

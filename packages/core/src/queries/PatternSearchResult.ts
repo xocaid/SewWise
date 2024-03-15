@@ -1,16 +1,16 @@
 import { Product } from '../generated/graphql';
 import {
-	ProductSearchQuery,
-	ProductSearchResultType,
-} from './ProductSearchQuery';
+	PatternSearchQuery,
+	PatternSearchResultType,
+} from './PatternSearchQuery';
 
-export class ProductSearchResult {
+export class PatternSearchResult {
 	private readonly _totalItems: number;
 	private _products: Product[] = [];
 
 	constructor(
-		public readonly query: ProductSearchQuery,
-		response: ProductSearchResultType,
+		public readonly query: PatternSearchQuery,
+		response: PatternSearchResultType,
 	) {
 		const connection = response.site.search.searchProducts.products;
 
