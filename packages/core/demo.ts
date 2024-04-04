@@ -1,8 +1,12 @@
 import { PatternSearchQuery } from './src';
+import { FabricSearchQuery } from './src/queries/FabricSearchQuery';
 
 (async function () {
-	const search = new PatternSearchQuery();
-	const response = await search.includeOutOfStock(true).execute();
+	const patternSearch = new PatternSearchQuery();
+	const patternResponse = await patternSearch.includeOutOfStock(true).execute();
 
-	console.log(JSON.stringify(response.products));
+	console.log(JSON.stringify(patternResponse.products));
+
+	const fabricSearch = new FabricSearchQuery();
+	const fabricResponse = await fabricSearch.findById('123');
 })();
