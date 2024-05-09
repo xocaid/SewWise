@@ -1,15 +1,15 @@
 import { gql } from '@apollo/client/core';
 
-import { PatternBrand } from '../constants';
-import { IQueryBuilder } from '../contracts';
+import { PatternBrand } from '../adapters/Simplicity/constants';
 import {
 	ProductConnection,
 	SearchProductsFiltersInput,
 	SearchProductsSortInput,
 	SearchQueriesSearchProductsArgs,
-} from '../generated/graphql';
+} from '../adapters/Simplicity/graphql';
+import { SimplicityApiClient } from '../adapters/Simplicity/SimplicityApiClient';
+import { IQueryBuilder } from '../contracts';
 import { PatternSearchResult } from './PatternSearchResult';
-import { SimplicityApiClient } from './SimplicityApiClient';
 
 const GraphQL = gql`
 	query SearchProducts(

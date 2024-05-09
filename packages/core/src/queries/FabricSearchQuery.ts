@@ -1,7 +1,11 @@
+import { JoannApiClient } from '../adapters/Joann/JoannApiClient';
+import {
+	Filter,
+	JoannSearchOptions,
+	SortBy,
+} from '../adapters/Joann/JoannSearchOptions';
 import { IQueryBuilder } from '../contracts';
-import { Filter, JoannSearchOptions, SortBy } from '../contracts/JoannSearch';
 import { FabricSearchResult } from './FabricSearchResult';
-import { JoannApiClient } from './JoannApiClient';
 
 export class FabricSearchQuery implements IQueryBuilder<FabricSearchResult> {
 	private searchFilter: JoannSearchOptions = {

@@ -1,2 +1,2 @@
-export * from './SimplicityApiClient';
+export * from '../adapters/Simplicity/SimplicityApiClient';
 export * from './PatternSearchQuery';

@@ -1,4 +1,4 @@
-import { Product } from '../generated/graphql';
+import { Product } from '../adapters/Simplicity/graphql';
 import {
 	PatternSearchQuery,
 	PatternSearchResultType,

@@ -1,10 +1,10 @@
-import { Filter, JoannSearchOptions } from '../contracts/JoannSearch';
-import { FabricSearchQuery } from './FabricSearchQuery';
+import { FabricSearchQuery } from '../../queries/FabricSearchQuery';
 import {
 	FabricSearchResult,
 	FabricSearchResultMetadata,
-} from './FabricSearchResult';
+} from '../../queries/FabricSearchResult';
 import { getCsrfToken, searchFabrics } from './JoannApi';
+import { Filter, JoannSearchOptions } from './JoannSearchOptions';
 
 export class JoannApiClient {
 	private static instance: JoannApiClient;

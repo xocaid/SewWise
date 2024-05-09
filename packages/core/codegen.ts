@@ -2,9 +2,9 @@ import type { CodegenConfig } from '@graphql-codegen/cli';
 
 const config: CodegenConfig = {
 	overwrite: true,
-	schema: './resources/schema.graphql',
+	schema: './src/adapters/Simplicity/resources/schema.graphql',
 	generates: {
-		'src/generated/graphql.ts': {
+		'src/adapters/Simplicity/graphql.ts': {
 			plugins: ['typescript'],
 		},
 	},

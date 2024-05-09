@@ -1,11 +1,11 @@
-import { Filter } from '../../src/contracts/JoannSearch';
-import { getCsrfToken, searchFabrics } from '../../src/queries/JoannApi';
-import { JoannApiClient } from '../../src/queries/JoannApiClient';
+import { getCsrfToken, searchFabrics } from '../../src/adapters/Joann/JoannApi';
+import { JoannApiClient } from '../../src/adapters/Joann/JoannApiClient';
+import { Filter } from '../../src/adapters/Joann/JoannSearchOptions';
 import { getMockSearchResult } from '../utilities';
 
 import mocked = jest.mocked;
 
-jest.mock('../../src/queries/JoannApi');
+jest.mock('../../src/adapters/Joann/JoannApi');
 
 describe('JoannApiClient', () => {
 	beforeEach(() => {

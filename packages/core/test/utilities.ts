@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
-import { JoannResponse } from '../src/contracts/JoannResponse';
+import { JoannResponse } from '../src/adapters/Joann/JoannResponse';
 
 export function getMockSearchResult(): JoannResponse {
 	const file = readFileSync(

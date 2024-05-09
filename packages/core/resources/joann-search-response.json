@@ -7515,10 +7515,7 @@
 						"display_name": "Under $5",
 						"value": "\"-inf\"-\"5\"",
 						"data": null,
-						"range": [
-							"-inf",
-							5
-						]
+						"range": ["-inf", 5]
 					},
 					{
 						"status": "",
@@ -7526,10 +7523,7 @@
 						"display_name": "$5 - $10",
 						"value": "\"5\"-\"10\"",
 						"data": null,
-						"range": [
-							5,
-							10
-						]
+						"range": [5, 10]
 					},
 					{
 						"status": "",
@@ -7537,10 +7531,7 @@
 						"display_name": "$10 - $25",
 						"value": "\"10\"-\"25\"",
 						"data": null,
-						"range": [
-							10,
-							25
-						]
+						"range": [10, 25]
 					},
 					{
 						"status": "",
@@ -7548,10 +7539,7 @@
 						"display_name": "$25 - $50",
 						"value": "\"25\"-\"50\"",
 						"data": null,
-						"range": [
-							25,
-							50
-						]
+						"range": [25, 50]
 					},
 					{
 						"status": "",
@@ -7559,10 +7547,7 @@
 						"display_name": "$50 - $100",
 						"value": "\"50\"-\"100\"",
 						"data": null,
-						"range": [
-							50,
-							100
-						]
+						"range": [50, 100]
 					},
 					{
 						"status": "",
@@ -7570,10 +7555,7 @@
 						"display_name": "$100 - $200",
 						"value": "\"100\"-\"200\"",
 						"data": null,
-						"range": [
-							100,
-							200
-						]
+						"range": [100, 200]
 					},
 					{
 						"status": "",
@@ -7581,10 +7563,7 @@
 						"display_name": "$200 - $300",
 						"value": "\"200\"-\"300\"",
 						"data": null,
-						"range": [
-							200,
-							300
-						]
+						"range": [200, 300]
 					},
 					{
 						"status": "",
@@ -7592,10 +7571,7 @@
 						"display_name": "Over $300",
 						"value": "\"300\"-\"inf\"",
 						"data": null,
-						"range": [
-							300,
-							"inf"
-						]
+						"range": [300, "inf"]
 					}
 				]
 			},
@@ -7612,10 +7588,7 @@
 						"display_name": "5 Stars",
 						"value": "\"5\"-\"inf\"",
 						"data": null,
-						"range": [
-							5,
-							"inf"
-						]
+						"range": [5, "inf"]
 					},
 					{
 						"status": "",
@@ -7623,10 +7596,7 @@
 						"display_name": "4 Stars",
 						"value": "\"4\"-\"inf\"",
 						"data": null,
-						"range": [
-							4,
-							"inf"
-						]
+						"range": [4, "inf"]
 					},
 					{
 						"status": "",
@@ -7634,10 +7604,7 @@
 						"display_name": "3 Stars",
 						"value": "\"3\"-\"inf\"",
 						"data": null,
-						"range": [
-							3,
-							"inf"
-						]
+						"range": [3, "inf"]
 					},
 					{
 						"status": "",
@@ -7645,10 +7612,7 @@
 						"display_name": "2 Stars",
 						"value": "\"2\"-\"inf\"",
 						"data": null,
-						"range": [
-							2,
-							"inf"
-						]
+						"range": [2, "inf"]
 					},
 					{
 						"status": "",
@@ -7656,10 +7620,7 @@
 						"display_name": "1 Star",
 						"value": "\"0.6\"-\"inf\"",
 						"data": null,
-						"range": [
-							0.6,
-							"inf"
-						]
+						"range": [0.6, "inf"]
 					}
 				]
 			},
@@ -10564,21 +10525,15 @@
 					"facets": [
 						{
 							"name": "IsDisplayableOnSite",
-							"values": [
-								"True"
-							]
+							"values": ["True"]
 						},
 						{
 							"name": "isInternational",
-							"values": [
-								"False"
-							]
+							"values": ["False"]
 						},
 						{
 							"name": "productGroup",
-							"values": [
-								"Product"
-							]
+							"values": ["Product"]
 						}
 					],
 					"master_product_name": "Symphony Broadcloth Polyester Blend Fabric  Solids",
@@ -10647,21 +10602,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -10711,21 +10660,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -10775,21 +10718,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -10839,21 +10776,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -10902,21 +10833,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -10965,21 +10890,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -11029,21 +10948,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -11093,21 +11006,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -11156,21 +11063,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -11220,21 +11121,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -11284,21 +11179,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -11348,21 +11237,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -11412,21 +11295,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -11475,21 +11352,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -11539,21 +11410,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -11602,21 +11467,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -11666,21 +11525,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -11730,21 +11583,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -11794,21 +11641,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -11857,21 +11698,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -11921,21 +11756,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -11985,21 +11814,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -12049,21 +11872,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -12113,21 +11930,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -12177,21 +11988,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -12241,21 +12046,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -12305,21 +12104,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -12369,21 +12162,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -12433,21 +12220,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -12497,21 +12278,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -12561,21 +12336,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -12625,21 +12394,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -12689,21 +12452,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -12753,21 +12510,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -12817,21 +12568,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -12881,21 +12626,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -12945,21 +12684,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -13009,21 +12742,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -13073,21 +12800,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -13137,21 +12858,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -13201,21 +12916,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -13264,21 +12973,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -13328,21 +13031,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -13392,21 +13089,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -13456,21 +13147,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -13520,21 +13205,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -13584,21 +13263,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -13648,21 +13321,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"False"
-									]
+									"values": ["False"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -13712,21 +13379,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -13775,21 +13436,15 @@
 							"facets": [
 								{
 									"name": "IsDisplayableOnSite",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "isInternational",
-									"values": [
-										"True"
-									]
+									"values": ["True"]
 								},
 								{
 									"name": "productGroup",
-									"values": [
-										"Product"
-									]
+									"values": ["Product"]
 								}
 							],
 							"IsDisplayableOnSite": true,
@@ -13950,9 +13605,7 @@
 		"sort_by": "relevance",
 		"sort_order": "descending",
 		"filters": {
-			"howToGetIt": [
-				"Ship to me"
-			]
+			"howToGetIt": ["Ship to me"]
 		},
 		"blacklist_rules": true,
 		"term": "",

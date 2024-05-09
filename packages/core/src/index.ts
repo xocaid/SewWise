@@ -1,4 +1,4 @@
-export * from './constants';
+export * from './adapters/Simplicity/constants';
 export * from './contracts';
-export * from './generated/graphql';
+export * from './adapters/Simplicity/graphql';
 export * from './queries';
