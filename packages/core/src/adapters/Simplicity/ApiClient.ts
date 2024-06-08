@@ -8,11 +8,11 @@ import {
 } from '@apollo/client/core';
 import { setContext } from '@apollo/client/link/context';
 
-export class SimplicityApiClient {
+export class ApiClient {
 	private readonly GRAPHQL_ENDPOINT = 'https://simplicity.com/graphql';
 	private readonly TOKEN_PAGE = 'https://simplicity.com/simplicity-patterns';
 
-	private static instance: SimplicityApiClient;
+	private static instance: ApiClient;
 
 	private client: ApolloClient<any> | null = null;
 	private authBearerToken: string | null = null;
@@ -20,7 +20,7 @@ export class SimplicityApiClient {
 	/**
 	 * Enforce the use of a singleton.
 	 *
-	 * @see SimplicityApiClient.getInstance()
+	 * @see ApiClient.getInstance()
 	 */
 	private constructor() {}
 
@@ -53,8 +53,8 @@ export class SimplicityApiClient {
 	}
 
 	static getInstance() {
-		if (!SimplicityApiClient.instance) {
-			this.instance = new SimplicityApiClient();
+		if (!ApiClient.instance) {
+			this.instance = new ApiClient();
 		}
 
 		return this.instance;

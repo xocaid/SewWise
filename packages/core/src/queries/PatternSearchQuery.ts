@@ -1,13 +1,13 @@
 import { gql } from '@apollo/client/core';
 
-import { PatternBrand } from '../adapters/Simplicity/constants';
 import {
+	ApiClient,
+	PatternBrand,
 	ProductConnection,
 	SearchProductsFiltersInput,
 	SearchProductsSortInput,
 	SearchQueriesSearchProductsArgs,
-} from '../adapters/Simplicity/graphql';
-import { SimplicityApiClient } from '../adapters/Simplicity/SimplicityApiClient';
+} from '../adapters/Simplicity';
 import { IQueryBuilder } from '../contracts';
 import { PatternSearchResult } from './PatternSearchResult';
 
@@ -96,7 +96,7 @@ export class PatternSearchQuery implements IQueryBuilder<PatternSearchResult> {
 	private readonly searchFilter: SearchProductsFiltersInput = {};
 
 	async execute() {
-		const client = SimplicityApiClient.getInstance();
+		const client = ApiClient.getInstance();
 		await client.init();
 
 		const response = await client.executeGraphQL<

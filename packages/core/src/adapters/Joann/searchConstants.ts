@@ -1,12 +1,12 @@
-export interface JoannSearchOptions {
-	filters: Partial<Record<Filter, number | string>>;
+export interface SearchOptions {
+	filters: Partial<Record<SearchFilter, number | string>>;
 	num_results_per_page?: number; // default: 30
 	page?: number;
 	sort_by?: SortBy;
 	sort_order?: 'ascending' | 'descending';
 }
 
-export enum Filter {
+export enum SearchFilter {
 	Type = 'ecommerceType2',
 	Collection = 'collection',
 	Color = 'refinementColors',

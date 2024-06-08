@@ -1,13 +1,13 @@
-import { FabricSearchQuery } from '../../queries/FabricSearchQuery';
 import {
+	FabricSearchQuery,
 	FabricSearchResult,
 	FabricSearchResultMetadata,
-} from '../../queries/FabricSearchResult';
-import { getCsrfToken, searchFabrics } from './JoannApi';
-import { Filter, JoannSearchOptions } from './JoannSearchOptions';
+} from '../../queries';
+import { getCsrfToken, searchFabrics } from './apiUtilities';
+import { SearchFilter, SearchOptions } from './searchConstants';
 
-export class JoannApiClient {
-	private static instance: JoannApiClient;
+export class ApiClient {
+	private static instance: ApiClient;
 
 	private cachedMetadata: FabricSearchResultMetadata | null = null;
 	private csrfToken: string | null = null;
@@ -22,7 +22,7 @@ export class JoannApiClient {
 		return this;
 	}
 
-	async search(options: JoannSearchOptions) {
+	async search(options: SearchOptions) {
 		this.assertInitialized();
 
 		return new FabricSearchResult(
@@ -34,7 +34,7 @@ export class JoannApiClient {
 		this.csrfToken = await getCsrfToken();
 	}
 
-	async getOptionsForFilter(filter: Filter) {
+	async getOptionsForFilter(filter: SearchFilter) {
 		await this.cacheSearchMetadata();
 		this.assertMetadataIsCached();
 
@@ -48,8 +48,8 @@ export class JoannApiClient {
 	}
 
 	static async getInstance() {
-		if (!JoannApiClient.instance) {
-			this.instance = new JoannApiClient();
+		if (!ApiClient.instance) {
+			this.instance = new ApiClient();
 			await this.instance.init();
 		}
 

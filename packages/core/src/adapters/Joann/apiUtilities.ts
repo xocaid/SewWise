@@ -1,7 +1,7 @@
 import { scrapeWebpageAsText } from '../../utilities/scraping';
 import { objToQueryParams } from '../../utilities/url';
 import { JoannResponse } from './JoannResponse';
-import { JoannSearchOptions } from './JoannSearchOptions';
+import { SearchOptions } from './searchConstants';
 
 const SEARCH_ENDPOINT = 'https://search.joann.com/browse/group_id/fabric';
 const CSRF_TOKEN_PAGE = 'https://www.joann.com/fabric/';
@@ -18,10 +18,7 @@ export async function getCsrfToken() {
 	return match[1];
 }
 
-export async function searchFabrics(
-	csrfToken: string,
-	options: JoannSearchOptions,
-) {
+export async function searchFabrics(csrfToken: string, options: SearchOptions) {
 	const endpoint = new URL(SEARCH_ENDPOINT);
 
 	endpoint.search = new URLSearchParams({

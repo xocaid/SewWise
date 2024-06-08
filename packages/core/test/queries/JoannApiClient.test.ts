@@ -1,6 +1,6 @@
+import { ApiClient } from '../../src/adapters/Joann/ApiClient';
 import { getCsrfToken, searchFabrics } from '../../src/adapters/Joann/JoannApi';
-import { JoannApiClient } from '../../src/adapters/Joann/JoannApiClient';
-import { Filter } from '../../src/adapters/Joann/JoannSearchOptions';
+import { SearchFilter } from '../../src/adapters/Joann/searchConstants';
 import { getMockSearchResult } from '../utilities';
 
 import mocked = jest.mocked;
@@ -18,8 +18,8 @@ describe('JoannApiClient', () => {
 			Promise.resolve(getMockSearchResult()),
 		);
 
-		const client = await JoannApiClient.getInstance();
-		const options = await client.getOptionsForFilter(Filter.HowToGetIt);
+		const client = await ApiClient.getInstance();
+		const options = await client.getOptionsForFilter(SearchFilter.HowToGetIt);
 
 		expect(options).toEqual(['FREE curbside & pick-up', 'Ship to me']);
 	});

@@ -1,4 +1,4 @@
-import { JoannResponse } from '../adapters/Joann/JoannResponse';
+import { JoannResponse } from '../adapters/Joann';
 
 export class FabricSearchResult {
 	constructor(private readonly response: JoannResponse) {}

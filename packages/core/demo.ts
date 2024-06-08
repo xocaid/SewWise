@@ -1,5 +1,5 @@
-import { PatternSearchQuery } from './src';
-import { FabricSearchQuery } from './src/queries/FabricSearchQuery';
+import { FabricSearchQuery, Joann, PatternSearchQuery } from './src';
+import { SearchFilter } from './src/adapters/Joann';
 
 (async function () {
 	const patternSearch = new PatternSearchQuery();
@@ -7,6 +7,13 @@ import { FabricSearchQuery } from './src/queries/FabricSearchQuery';
 
 	console.log(JSON.stringify(patternResponse.products));
 
+	const fabricApi = await Joann.ApiClient.getInstance();
+	const fabricOptions = await fabricApi.getOptionsForFilter(SearchFilter.Color);
+
 	const fabricSearch = new FabricSearchQuery();
-	const fabricResponse = await fabricSearch.findById('123');
+	fabricSearch.applyFilter(SearchFilter.Color, fabricOptions[0]);
+
+	const fabricResponse = await fabricSearch.execute();
+
+	console.log(JSON.stringify(fabricResponse.results));
 })();

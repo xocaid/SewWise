@@ -1,24 +1,24 @@
-import { JoannApiClient } from '../adapters/Joann/JoannApiClient';
 import {
-	Filter,
-	JoannSearchOptions,
+	ApiClient,
+	SearchFilter,
+	SearchOptions,
 	SortBy,
-} from '../adapters/Joann/JoannSearchOptions';
+} from '../adapters/Joann';
 import { IQueryBuilder } from '../contracts';
 import { FabricSearchResult } from './FabricSearchResult';
 
 export class FabricSearchQuery implements IQueryBuilder<FabricSearchResult> {
-	private searchFilter: JoannSearchOptions = {
+	private searchFilter: SearchOptions = {
 		filters: {},
 	};
 
 	async execute(): Promise<FabricSearchResult> {
-		const client = await JoannApiClient.getInstance();
+		const client = await ApiClient.getInstance();
 
 		return await client.search(this.searchFilter);
 	}
 
-	applyFilter(filter: Filter, value: number | string): this {
+	applyFilter(filter: SearchFilter, value: number | string): this {
 		this.searchFilter.filters[filter] = value;
 
 		return this;
