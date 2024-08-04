@@ -4,6 +4,7 @@ export interface SearchOptions {
 	page?: number;
 	sort_by?: SortBy;
 	sort_order?: 'ascending' | 'descending';
+	term?: string;
 }
 
 export enum SearchFilter {

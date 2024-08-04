@@ -1,11 +1,34 @@
 {
 	"name": "sewwise-cli",
-	"description": "The CLI for loading and searching through sewing resources",
 	"version": "0.0.0",
+	"description": "The CLI for loading and searching through sewing resources",
+	"keywords": [
+		"oclif"
+	],
+	"homepage": "https://github.com/xocaid/SewWise",
+	"bugs": "https://github.com/xocaid/SewWise/issues",
+	"repository": "xocaid/SewWise",
+	"license": "MIT",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"bin": {
 		"sewwise": "./bin/run.js"
 	},
-	"bugs": "https://github.com/xocaid/SewWise/issues",
+	"files": [
+		"/bin",
+		"/dist",
+		"/oclif.manifest.json"
+	],
+	"scripts": {
+		"build": "shx rm -rf dist && tsc -b",
+		"lint": "eslint . --ext .ts",
+		"prepack": "oclif manifest && oclif readme",
+		"postpack": "shx rm -f oclif.manifest.json",
+		"test": "mocha --forbid-only \"test/**/*.test.ts\"",
+		"posttest": "npm run lint",
+		"version": "oclif readme && git add README.md"
+	},
 	"dependencies": {
 		"@oclif/core": "^4",
 		"@oclif/plugin-help": "^6",
@@ -31,18 +54,6 @@
 	"engines": {
 		"node": ">=18.0.0"
 	},
-	"files": [
-		"/bin",
-		"/dist",
-		"/oclif.manifest.json"
-	],
-	"homepage": "https://github.com/xocaid/SewWise",
-	"keywords": [
-		"oclif"
-	],
-	"license": "MIT",
-	"main": "dist/index.js",
-	"type": "module",
 	"oclif": {
 		"bin": "sewwise",
 		"dirname": "sewwise",
@@ -57,16 +68,5 @@
 				"description": "Say hello to the world and others"
 			}
 		}
-	},
-	"repository": "xocaid/SewWise",
-	"scripts": {
-		"build": "shx rm -rf dist && tsc -b",
-		"lint": "eslint . --ext .ts",
-		"postpack": "shx rm -f oclif.manifest.json",
-		"posttest": "npm run lint",
-		"prepack": "oclif manifest && oclif readme",
-		"test": "mocha --forbid-only \"test/**/*.test.ts\"",
-		"version": "oclif readme && git add README.md"
-	},
-	"types": "dist/index.d.ts"
+	}
 }

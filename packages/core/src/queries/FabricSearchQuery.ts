@@ -36,6 +36,12 @@ export class FabricSearchQuery implements IQueryBuilder<FabricSearchResult> {
 		return this;
 	}
 
+	searchTerm(term: string): this {
+		this.searchFilter.term = term;
+
+		return this;
+	}
+
 	sortBy(sortBy: SortBy, ascending: boolean): this {
 		this.searchFilter.sort_by = sortBy;
 		this.searchFilter.sort_order = ascending ? 'ascending' : 'descending';

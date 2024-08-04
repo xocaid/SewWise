@@ -2,6 +2,7 @@
 	"name": "@xocaid/sewwise-core",
 	"version": "0.0.0",
 	"description": "The core library for SewWise that abstracts away the third-party connections and other logic",
+	"type": "module",
 	"main": "src/index.ts",
 	"scripts": {
 		"build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js",
