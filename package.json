@@ -15,9 +15,9 @@
 		"packages/*"
 	],
 	"scripts": {
-		"postinstall": "npm run build",
 		"build": "turbo build && shx mkdir -p var/db/",
 		"format": "prettier --write .",
+		"postinstall": "npm run build",
 		"lint": "turbo lint",
 		"test": "turbo test"
 	},
@@ -26,6 +26,7 @@
 		"@allejo/prettier-config": "^1.0.3",
 		"prettier": "^3.0.3",
 		"shx": "^0.3.4",
-		"turbo": "^1.10.15"
-	}
+		"turbo": "^2.0.12"
+	},
+	"packageManager": "npm@10.8.2"
 }
