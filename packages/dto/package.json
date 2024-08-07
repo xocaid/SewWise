@@ -1,0 +1,17 @@
+{
+	"name": "@xocaid/sewwise-dto",
+	"version": "0.0.0",
+	"description": "The data transfer object library for SewWise that abstracts away the database connections and other logic",
+	"type": "module",
+	"main": "src/index.ts",
+	"scripts": {
+		"build": "prisma generate",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"@prisma/client": "^5.17.0"
+	},
+	"devDependencies": {
+		"prisma": "^5.17.0"
+	}
+}

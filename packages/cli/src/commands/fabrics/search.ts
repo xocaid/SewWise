@@ -1,5 +1,6 @@
 import { Args, Command, Flags } from '@oclif/core';
 import { FabricSearchQuery, Joann } from '@xocaid/sewwise-core';
+import { fromResponseToDTOs, PrismaClient } from '@xocaid/sewwise-dto';
 
 export default class FabricsSearch extends Command {
 	static override args = {
@@ -34,8 +35,15 @@ export default class FabricsSearch extends Command {
 		this.applySortOrder(apiClient, flags.sort);
 
 		const response = await apiClient.execute();
+		const fabricDTOs = fromResponseToDTOs(response.response);
 
-		this.log(JSON.stringify(response));
+		const prisma = new PrismaClient();
+
+		await prisma.$transaction(async (tx) => {
+			for (const fabricDTO of fabricDTOs) {
+				await tx.fabric.create({ data: fabricDTO });
+			}
+		});
 	}
 
 	private applySearchFilters(apiClient: FabricSearchQuery, filters?: string[]) {

@@ -1,0 +1,53 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+	output = "src/generated/"
+}
+
+model Fabric {
+  id          Int             @id @default(autoincrement())
+  external_id String
+  name        String
+  url         String
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  variants    FabricVariant[]
+  status      Availability
+  seller      Seller
+}
+
+model FabricVariant {
+  id          Int           @id @default(autoincrement())
+  external_id String
+  fabric      Fabric        @relation(fields: [fabric_id], references: [id])
+  fabric_id   Int
+  name        String?
+  url         String
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  images      FabricImage[]
+}
+
+model FabricImage {
+  id           Int           @id @default(autoincrement())
+  variant      FabricVariant @relation(fields: [variant_id], references: [id])
+  variant_id   Int
+  original_url String
+  filename     String?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+}
+
+enum Availability {
+  IN_STOCK
+  OUT_OF_STOCK
+  RETIRED
+}
+
+enum Seller {
+  Joaan
+}

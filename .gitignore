@@ -30,6 +30,11 @@ yarn-error.log*
 
 # turbo
 .turbo
+.turbo-cookie
 
 # vercel
 .vercel
+
+# generated files
+packages/dto/src/generated/
+var/
