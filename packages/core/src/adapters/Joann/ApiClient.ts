@@ -21,11 +21,12 @@ export class ApiClient {
 		return this;
 	}
 
-	async search(options: SearchOptions) {
+	async search(query: FabricSearchQuery) {
 		this.assertInitialized();
 
 		return new FabricSearchResult(
-			await searchFabrics(this.csrfToken!, options),
+			await searchFabrics(this.csrfToken!, query.searchOptions),
+			query,
 		);
 	}
 

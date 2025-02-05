@@ -1,3 +1,5 @@
+import { first } from 'cheerio/lib/api/traversing';
+
 import {
 	ApiClient,
 	SearchFilter,
@@ -10,45 +12,58 @@ import {
 	FabricSearchResultMetadata,
 } from './FabricSearchResult';
 
+// Magic number as per the Joann API
+const MAX_RESULTS_PER_QUERY = 200;
+
 export class FabricSearchQuery implements IQueryBuilder<FabricSearchResult> {
 	private static cachedMetadata: FabricSearchResultMetadata | null = null;
-	private searchFilter: SearchOptions = {
+	private _searchFilter: SearchOptions = {
 		filters: {},
 	};
+
+	get searchOptions() {
+		return this._searchFilter;
+	}
 
 	async execute(): Promise<FabricSearchResult> {
 		const client = await ApiClient.getInstance();
 
-		return await client.search(this.searchFilter);
+		return await client.search(this);
 	}
 
 	applyFilter(filter: SearchFilter, value: number | string): this {
-		this.searchFilter.filters[filter] = value;
+		this._searchFilter.filters[filter] = value;
 
 		return this;
 	}
 
 	getPage(page: number): this {
-		this.searchFilter.page = page;
+		this._searchFilter.page = page;
 
 		return this;
 	}
 
 	numberOfResults(numResults: number): this {
-		this.searchFilter.num_results_per_page = numResults;
+		if (numResults > MAX_RESULTS_PER_QUERY) {
+			throw new Error(
+				`Cannot request more than ${MAX_RESULTS_PER_QUERY} results per query.`,
+			);
+		}
+
+		this._searchFilter.num_results_per_page = numResults;
 
 		return this;
 	}
 
 	searchTerm(term: string): this {
-		this.searchFilter.term = term;
+		this._searchFilter.term = term;
 
 		return this;
 	}
 
 	sortBy(sortBy: SortBy, ascending: boolean): this {
-		this.searchFilter.sort_by = sortBy;
-		this.searchFilter.sort_order = ascending ? 'ascending' : 'descending';
+		this._searchFilter.sort_by = sortBy;
+		this._searchFilter.sort_order = ascending ? 'ascending' : 'descending';
 
 		return this;
 	}
