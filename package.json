@@ -26,6 +26,7 @@
 		"@allejo/prettier-config": "^1.0.3",
 		"prettier": "^3.0.3",
 		"shx": "^0.3.4",
+		"tsx": "^4.19.2",
 		"turbo": "^2.0.12"
 	},
 	"packageManager": "npm@10.8.2"
