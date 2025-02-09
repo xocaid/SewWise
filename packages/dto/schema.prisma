@@ -5,41 +5,72 @@ datasource db {
 
 generator client {
   provider = "prisma-client-js"
-	output = "src/generated/"
+  output   = "src/generated/"
+}
+
+model Image {
+  id        Int      @id @default(autoincrement())
+  url       String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Fabric {
-  id          Int             @id @default(autoincrement())
-  external_id String
-  name        String
-  url         String
-  createdAt   DateTime        @default(now())
-  updatedAt   DateTime        @updatedAt
-  variants    FabricVariant[]
-  status      Availability
-  seller      Seller
+  id             Int             @id @default(autoincrement())
+  seller         Seller
+  externalId     String
+  url            String
+  name           String
+  description    String
+  basePrice      Decimal
+  brand          Brand           @relation(fields: [brandId], references: [id])
+  brandId        Int
+  category       FabricCategory  @relation(fields: [categoryId], references: [id])
+  categoryId     Int
+  tags           String[]
+  imageUrl       String
+  swatchImageUrl String
+  colors         String[]
+  variants       FabricVariant[]
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+}
+
+model FabricCategory {
+  id          Int      @id @default(autoincrement())
+  extenalId   String
+  description String
+  fabrics     Fabric[]
+}
+
+model Brand {
+  id        Int      @id @default(autoincrement())
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  fabrics   Fabric[]
 }
 
 model FabricVariant {
-  id          Int           @id @default(autoincrement())
-  external_id String
-  fabric      Fabric        @relation(fields: [fabric_id], references: [id])
-  fabric_id   Int
-  name        String?
-  url         String
-  createdAt   DateTime      @default(now())
-  updatedAt   DateTime      @updatedAt
-  images      FabricImage[]
+  id         Int           @id @default(autoincrement())
+  externalId String
+  fabric     Fabric        @relation(fields: [fabricId], references: [id])
+  fabricId   Int
+  name       String?
+  url        String
+  createdAt  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+  images     FabricImage[]
 }
 
 model FabricImage {
-  id           Int           @id @default(autoincrement())
-  variant      FabricVariant @relation(fields: [variant_id], references: [id])
-  variant_id   Int
-  original_url String
-  filename     String?
-  createdAt    DateTime      @default(now())
-  updatedAt    DateTime      @updatedAt
+  id          Int           @id @default(autoincrement())
+  variant     FabricVariant @relation(fields: [variantId], references: [id])
+  variantId   Int
+  originalUrl String
+  filename    String?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
 }
 
 enum Availability {
