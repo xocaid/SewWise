@@ -1,19 +1,32 @@
-import { FabricSearchQuery, Joann, PatternSearchQuery } from './src';
-import { SearchFilter } from './src/adapters/Joann';
+import { stringify } from 'jsonlines';
+import { createWriteStream } from 'node:fs';
+
+import { FabricSearchQuery, FabricSearchResult } from './src';
 
 (async function () {
-	const patternSearch = new PatternSearchQuery();
-	const patternResponse = await patternSearch.includeOutOfStock(true).execute();
+	// const patternSearch = new PatternSearchQuery();
+	// const patternResponse = await patternSearch.includeOutOfStock(true).execute();
+	//
+	// console.log(JSON.stringify(patternResponse.products));
 
-	console.log(JSON.stringify(patternResponse.products));
+	const fabricQuery = new FabricSearchQuery();
+	let fabricResponse: FabricSearchResult | undefined = await fabricQuery
+		.numberOfResults(36)
+		.execute();
 
-	const fabricApi = await Joann.ApiClient.getInstance();
-	const fabricOptions = await fabricApi.getOptionsForFilter(SearchFilter.Color);
+	const writeStream = createWriteStream('fabrics.jsonl', { flags: 'w' });
+	const stringifier = stringify();
+	stringifier.pipe(writeStream);
 
-	const fabricSearch = new FabricSearchQuery();
-	fabricSearch.applyFilter(SearchFilter.Color, fabricOptions[0]);
+	while (fabricResponse !== undefined) {
+		for (const fabric of fabricResponse.results) {
+			stringifier.write(fabric);
+		}
 
-	const fabricResponse = await fabricSearch.execute();
+		fabricResponse = await fabricResponse.nextPage();
+		process.stdout.write('.');
+	}
 
-	console.log(JSON.stringify(fabricResponse.results));
+	stringifier.end();
+	console.log('Done!');
 })();
