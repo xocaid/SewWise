@@ -8,77 +8,80 @@ generator client {
   output   = "src/generated/"
 }
 
-model Image {
+model Brand {
   id        Int      @id @default(autoincrement())
-  url       String
+  name      String   @unique
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  fabrics   Fabric[]
+}
+
+model Seller {
+	id        Int      @id @default(autoincrement())
+	name      String
+	createdAt DateTime @default(now())
+	updatedAt DateTime @updatedAt
+	fabrics   Fabric[]
 }
 
 model Fabric {
-  id             Int             @id @default(autoincrement())
-  seller         Seller
-  externalId     String
-  url            String
-  name           String
-  description    String
-  basePrice      Decimal
-  brand          Brand           @relation(fields: [brandId], references: [id])
-  brandId        Int
-  category       FabricCategory  @relation(fields: [categoryId], references: [id])
-  categoryId     Int
-  tags           String[]
-  imageUrl       String
-  swatchImageUrl String
-  colors         String[]
-  variants       FabricVariant[]
-  createdAt      DateTime        @default(now())
-  updatedAt      DateTime        @updatedAt
+  id          Int             @id @default(autoincrement())
+  seller      Seller          @relation(fields: [sellerId], references: [id])
+  sellerId    Int
+	externalId  String
+  itemNumber  String
+  url         String
+  name        String
+	description String
+  basePrice   Decimal
+  rating      Decimal
+  ratingCount Int
+  ratingMax   Decimal
+  brand       Brand           @relation(fields: [brandId], references: [id])
+  brandId     Int
+  category    FabricCategory  @relation(fields: [categoryId], references: [id])
+  categoryId  Int
+  tags        String[]
+  features    String
+  variants    FabricVariant[]
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
 }
 
 model FabricCategory {
   id          Int      @id @default(autoincrement())
   extenalId   String
   description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
   fabrics     Fabric[]
 }
 
-model Brand {
-  id        Int      @id @default(autoincrement())
-  name      String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  fabrics   Fabric[]
-}
-
 model FabricVariant {
-  id         Int           @id @default(autoincrement())
-  externalId String
-  fabric     Fabric        @relation(fields: [fabricId], references: [id])
-  fabricId   Int
-  name       String?
-  url        String
-  createdAt  DateTime      @default(now())
-  updatedAt  DateTime      @updatedAt
-  images     FabricImage[]
+  id            Int      @id @default(autoincrement())
+  externalId    String
+  fabric        Fabric   @relation(fields: [fabricId], references: [id])
+  fabricId      Int
+  name          String
+  url           String
+  colors        String[]
+  image         Image    @relation("VariantImage", fields: [imageId], references: [id])
+  imageId       Int
+  swatchImage   Image    @relation("SwatchImage", fields: [swatchImageId], references: [id])
+  swatchImageId Int
+  images        Image[]  // needed because of Image.fabricVariant
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
 }
 
-model FabricImage {
-  id          Int           @id @default(autoincrement())
-  variant     FabricVariant @relation(fields: [variantId], references: [id])
-  variantId   Int
-  originalUrl String
-  filename    String?
-  createdAt   DateTime      @default(now())
-  updatedAt   DateTime      @updatedAt
-}
-
-enum Availability {
-  IN_STOCK
-  OUT_OF_STOCK
-  RETIRED
-}
-
-enum Seller {
-  Joaan
+model Image {
+  id              Int             @id @default(autoincrement())
+  originalUrl     String
+  relativeUrl     String
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  fabricVariants  FabricVariant[] @relation("VariantImage")
+  swatchVariants  FabricVariant[] @relation("SwatchImage")
+  fabricVariant   FabricVariant?  @relation(fields: [fabricVariantId], references: [id])
+  fabricVariantId Int?
 }
