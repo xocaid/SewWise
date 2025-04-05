@@ -18,7 +18,7 @@ model Brand {
 
 model Seller {
 	id        Int      @id @default(autoincrement())
-	name      String
+	name      String   @unique
 	createdAt DateTime @default(now())
 	updatedAt DateTime @updatedAt
 	fabrics   Fabric[]
@@ -42,7 +42,7 @@ model Fabric {
   category    FabricCategory  @relation(fields: [categoryId], references: [id])
   categoryId  Int
   tags        String[]
-  features    String
+  features    String?
   variants    FabricVariant[]
   createdAt   DateTime        @default(now())
   updatedAt   DateTime        @updatedAt
@@ -50,7 +50,7 @@ model Fabric {
 
 model FabricCategory {
   id          Int      @id @default(autoincrement())
-  extenalId   String
+  externalId   String  @unique
   description String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
