@@ -17,22 +17,22 @@ model Brand {
 }
 
 model Seller {
-	id        Int      @id @default(autoincrement())
-	name      String   @unique
-	createdAt DateTime @default(now())
-	updatedAt DateTime @updatedAt
-	fabrics   Fabric[]
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  fabrics   Fabric[]
 }
 
 model Fabric {
   id          Int             @id @default(autoincrement())
   seller      Seller          @relation(fields: [sellerId], references: [id])
   sellerId    Int
-	externalId  String
+  externalId  String          @unique
   itemNumber  String
   url         String
   name        String
-	description String
+  description String
   basePrice   Decimal
   rating      Decimal
   ratingCount Int
@@ -50,7 +50,7 @@ model Fabric {
 
 model FabricCategory {
   id          Int      @id @default(autoincrement())
-  externalId   String  @unique
+  externalId  String   @unique
   description String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
@@ -59,7 +59,7 @@ model FabricCategory {
 
 model FabricVariant {
   id            Int      @id @default(autoincrement())
-  externalId    String
+  externalId    String   @unique
   fabric        Fabric   @relation(fields: [fabricId], references: [id])
   fabricId      Int
   name          String
@@ -69,14 +69,14 @@ model FabricVariant {
   imageId       Int
   swatchImage   Image    @relation("SwatchImage", fields: [swatchImageId], references: [id])
   swatchImageId Int
-  images        Image[]  // needed because of Image.fabricVariant
+  images        Image[] // needed because of Image.fabricVariant
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
 }
 
 model Image {
   id              Int             @id @default(autoincrement())
-  originalUrl     String
+  originalUrl     String          @unique
   relativeUrl     String
   createdAt       DateTime        @default(now())
   updatedAt       DateTime        @updatedAt
