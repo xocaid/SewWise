@@ -12,20 +12,22 @@
 		"url": "git+https://github.com/xocaid/SewWise.git"
 	},
 	"workspaces": [
+		"apps/*",
 		"packages/*"
 	],
 	"scripts": {
-		"build": "turbo build && shx mkdir -p var/db/",
+		"build": "turbo build --filter=!./apps/open-fabric && shx mkdir -p var/db/",
+		"dev:open-fabric": "turbo dev --filter=@xocaid/open-fabric",
 		"format": "prettier --write .",
-		"postinstall": "npm run build",
 		"lint": "turbo lint",
 		"test": "turbo test"
 	},
 	"prettier": "@allejo/prettier-config",
 	"devDependencies": {
-		"@allejo/prettier-config": "^1.0.3",
+		"@allejo/prettier-config": "^1.0.7",
 		"prettier": "^3.0.3",
 		"shx": "^0.3.4",
+		"tsup": "^8.4.0",
 		"tsx": "^4.19.2",
 		"turbo": "^2.0.12"
 	},
