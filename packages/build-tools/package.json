@@ -1,0 +1,20 @@
+{
+	"name": "@xocaid/sewwise-build-tools",
+	"version": "0.0.0",
+	"description": "Shared build utilities across SewWise projects",
+	"license": "ISC",
+	"main": "dist/index.mjs",
+	"scripts": {
+		"build": "tsup"
+	},
+	"dependencies": {
+		"type-fest": "^4.39.1"
+	},
+	"devDependencies": {
+		"@types/node": "*",
+		"tsconfig": "*",
+		"tsup": "*",
+		"typescript": "*",
+		"vitest": "*"
+	}
+}
