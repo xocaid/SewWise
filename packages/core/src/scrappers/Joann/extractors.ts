@@ -75,7 +75,7 @@ export async function getFabricDetails(
 	return data;
 }
 
-export async function getProject(url: string): Promise<ProjectData | null> {
+export async function getProjectDetails(url: string): Promise<ProjectData | null> {
 	const $ = await scrapeWebpageAsElement(url);
 
 	const embeddedJsonRaw = $('.pdp-main').attr('data-initial-state-product');

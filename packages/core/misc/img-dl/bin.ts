@@ -1,7 +1,7 @@
 import { createReadStream } from 'node:fs';
 import { createInterface } from 'node:readline';
 
-import { getFabricDetails, getProject } from '../../src/scrappers';
+import { getFabricDetails, getProjectDetails } from '../../src/scrappers';
 
 enum ImportType {
 	Fabrics,
@@ -16,16 +16,20 @@ const ScrapperMappings = {
 		urlPrefix: 'p/',
 	},
 	[ImportType.Projects]: {
-		extractor: getProject,
+		extractor: getProjectDetails,
 		filename: 'all-project-urls.txt',
 		urlPrefix: '',
 	},
 };
 
-function eachUrl<T extends ImportType, E extends typeof ScrapperMappings>(
+type ReturnTypes<T> = T extends (...args: any[]) => infer R ? R : never;
+type ExtractorCallbacks = typeof ScrapperMappings[ImportType]['extractor'];
+type ExtractorTypes = Awaited<ReturnTypes<ExtractorCallbacks>>;
+
+function eachUrl<T extends ImportType>(
 	type: T,
-	callback: (element: Awaited<ReturnType<E[T]['extractor']>> | null) => void,
-): Promise<void> {
+	callback: (element: ExtractorTypes) => void,
+): Promise<void> {``
 	const fileStream = createReadStream(ScrapperMappings[type].filename);
 	const rl = createInterface({
 		input: fileStream,

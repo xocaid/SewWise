@@ -3,8 +3,8 @@
 	"version": "0.0.0",
 	"description": "The data transfer object library for SewWise that abstracts away the database connections and other logic",
 	"type": "module",
-	"types": "dist/index.d.ts",
 	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"scripts": {
 		"build": "prisma generate & rimraf dist/package.json",
 		"postinstall": "npm run build"
